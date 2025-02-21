@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Master|x64">
+      <Configuration>Master</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nemesis</RootNamespace>
+    <ProjectName>libNeCore</ProjectName>
+    <ProjectGuid>{1C4B55BF-A562-4460-A9D6-3D801E8D9B09}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Clang</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|Xbox 360'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>2010-01</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Master|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Master|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\Cfg\vs\Lib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|Xbox 360'">
+    <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release UWP|Xbox 360'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Master|x64'">
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\All.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Allocator.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Array.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\ArrayTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Assert.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\AssertTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Atomic.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\AtomicTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\BitSet.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Core.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Debug.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\DebugTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Exception.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\File.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\FileTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\FreeList.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\HashTable.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Input.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\InputTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Json.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\JsonDoc.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\JsonNode.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\JsonOut.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Logging.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\LoggingTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Map.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Math.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\MathTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Alloc.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\AllocTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Memory.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\NameSet.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Socket.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\SocketTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\New.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Process.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\ProcessTypes.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Sort.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Sse2.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Sse2Types.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Stack.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\StrBuf.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\String.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Table.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Target.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\Types.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Core\VMem.h" />
+    <ClInclude Include="Atomic_Windows.h" />
+    <ClInclude Include="Debug_Null.h" />
+    <ClInclude Include="Debug_Windows.h" />
+    <ClInclude Include="Exception_Null.h" />
+    <ClInclude Include="Exception_Windows.h" />
+    <ClInclude Include="File_Windows.h" />
+    <ClInclude Include="Input_Null.h" />
+    <ClInclude Include="Input_Windows.h" />
+    <ClInclude Include="Socket_Ansi.h" />
+    <ClInclude Include="Socket_Windows.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Process_Windows.h" />
+    <ClInclude Include="Sort_Windows.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VMem_Null.h" />
+    <ClInclude Include="VMem_Windows.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Allocator.cpp" />
+    <ClCompile Include="Assert.cpp" />
+    <ClCompile Include="Atomic.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Json.cpp" />
+    <ClCompile Include="JsonDoc.cpp" />
+    <ClCompile Include="JsonNode.cpp" />
+    <ClCompile Include="JsonOut.cpp" />
+    <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="Alloc.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="NameSet.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="Process.cpp" />
+    <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release UWP|NX32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release UWP|Xbox 360'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Master|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StrBuf.cpp" />
+    <ClCompile Include="String.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="VMem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Inc\Nemesis\Core\Math.inl" />
+    <None Include="..\..\..\Inc\Nemesis\Core\Sse2.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

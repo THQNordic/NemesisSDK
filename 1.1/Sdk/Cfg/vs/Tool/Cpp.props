@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- -->
+  <!-- .................... Import .................... -->
+  <!-- -->
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  
+  <!-- -->
+  <!-- .................... Meta .................... -->
+  <!-- -->
+  <PropertyGroup>
+    <_PropertySheetDisplayName>C/C++ Settings</_PropertySheetDisplayName>
+  </PropertyGroup>
+
+  <!-- -->
+  <!-- .................... C/C++ .................... -->
+  <!-- -->
+  <ItemDefinitionGroup Label="C/C++">
+
+    <!-- -->
+    <!-- .................... Defaults (Common) .................... -->
+    <!-- -->
+    <ClCompile>
+      <!-- -->
+      <!-- .................... Nemesis Sdk .................... -->
+      <!-- -->
+      <AdditionalIncludeDirectories>.;$(Ne-Dir-Inc);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+
+      <!-- -->
+      <!-- .................... Config Macro .................... -->
+      <!-- -->
+      <PreprocessorDefinitions Condition="$(Ne-Cfg-IsDebug)">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="$(Ne-Cfg-IsRelease)">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="$(Ne-Cfg-IsMaster)">NDEBUG;_MASTER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="$(Ne-Cfg-IsUWP)">_UWP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+
+      <!-- -->
+      <!-- .................... Platform Macro .................... -->
+      <!-- -->
+      <!--
+      <PreprocessorDefinitions Condition="$(Platform)=='NX32'">_NX32;%(PreprocessorDefinitions)"</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="$(Platform)=='NX64'">_NX64;%(PreprocessorDefinitions)"</PreprocessorDefinitions>
+      -->
+      <PreprocessorDefinitions Condition="$(Platform)=='Xbox 360'">_XBOX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+
+      <!-- -->
+      <!-- .................... Precompiled Headers .................... -->
+      <!-- -->
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+
+    <!-- -->
+    <!-- .................... Defaults (MSVC) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='Win32' or $(Platform)=='x64' or $(Platform)=='Xbox 360' or $(Platform)=='Durango'">
+      <!-- -->
+      <!-- Warnings -->
+      <!-- -->
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      
+      <!-- -->
+      <!-- Optimization -->
+      <!-- -->
+      <Optimization Condition="$(Ne-Cfg-IsDebug)">Disabled</Optimization>
+      <Optimization Condition="$(Ne-Cfg-IsRelease)">MaxSpeed</Optimization>
+      <Optimization Condition="$(Ne-Cfg-IsMaster)">Full</Optimization>
+      <IntrinsicFunctions Condition="$(Ne-Cfg-IsDebug)">false</IntrinsicFunctions>
+      <IntrinsicFunctions Condition="!$(Ne-Cfg-IsDebug)">true</IntrinsicFunctions>
+      <FunctionLevelLinking Condition="$(Ne-Cfg-IsDebug)">false</FunctionLevelLinking>
+      <FunctionLevelLinking Condition="!$(Ne-Cfg-IsDebug)">true</FunctionLevelLinking>
+
+      <!-- -->
+      <!-- Rtti -->
+      <!-- -->
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+
+      <!-- -->
+      <!-- Pdb -->
+      <!-- -->
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+
+      <!-- -->
+      <!-- Strings -->
+      <!-- -->
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+
+    <!-- -->
+    <!-- .................... Defaults (Orbis) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='ORBIS'">
+      <!-- -->
+      <!-- Warnings -->
+      <!-- -->
+      <Warnings>MoreWarnings</Warnings>
+      <WarningsAsErrors>true</WarningsAsErrors>
+      <DisableSpecificWarnings>unused-but-set-variable</DisableSpecificWarnings>
+
+      <!-- -->
+      <!-- Optimization -->
+      <!-- -->
+      <OptimizationLevel Condition="$(Ne-Cfg-IsDebug)">Level0</OptimizationLevel>
+      <OptimizationLevel Condition="!$(Ne-Cfg-IsDebug)">Level3</OptimizationLevel>
+
+      <!-- -->
+      <!-- Rtti -->
+      <!-- -->
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+
+      <!-- -->
+      <!-- Pdb -->
+      <!-- -->
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <InlinedScopes>true</InlinedScopes>
+    </ClCompile>
+
+    <!-- -->
+    <!-- .................... Defaults (PS3) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='PS3'">
+      <!-- -->
+      <!-- Warnings -->
+      <!-- -->
+      <!--
+      <TreatMessagesAsErrors>WarningsAsErrors</TreatMessagesAsErrors>
+      -->
+      <TreatMessagesAsErrors>ReportedErrors</TreatMessagesAsErrors>
+      
+      <!-- -->
+      <!-- Optimization -->
+      <!-- -->
+      <OptimizationLevel Condition="$(Ne-Cfg-IsDebug)">Level0</OptimizationLevel>
+      <OptimizationLevel Condition="!$(Ne-Cfg-IsDebug)">Level2</OptimizationLevel>
+      
+      <!-- -->
+      <!-- Pdb -->
+      <!-- -->
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </ClCompile>
+    
+    <!-- -->
+    <!-- .................... Defaults (NX) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='NX32' or $(Platform)=='NX64'">
+      <!-- -->
+      <!-- Warnings -->
+      <!-- -->
+      <WarningsAsErrors>true</WarningsAsErrors>
+
+      <!-- -->
+      <!-- Optimization -->
+      <!-- -->
+      <OptimizationLevel Condition="$(Ne-Cfg-IsDebug)">O0</OptimizationLevel>
+      <OptimizationLevel Condition="!$(Ne-Cfg-IsDebug)">O3</OptimizationLevel>
+      <Vectorization Condition="$(Ne-Cfg-IsDebug)">false</Vectorization>
+      <Vectorization Condition="!$(Ne-Cfg-IsDebug)">true</Vectorization>
+      
+      <!-- -->
+      <!-- Rtti -->
+      <!-- -->
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+
+      <!-- -->
+      <!-- Pdb -->
+      <!-- -->
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </ClCompile>
+    <!-- -->
+    <!-- .................... Specifics (Durango) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='Durango'">
+      <AdditionalUsingDirectories>$(Console_SdkPackagesRoot);$(Console_SdkWindowsMetadataPath);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>__WRL_NO_DEFAULT_LIB__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+
+    <!-- -->
+    <!-- .................... Specifics (NX) .................... -->
+    <!-- -->
+    <ClCompile Condition="$(Platform)=='NX32' or $(Platform)=='NX64'">
+      <AdditionalIncludeDirectories>$(NintendoSdkRoot)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Condition="$(Platform)=='NX32'">
+      <PreprocessorDefinitions>_NX32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Condition="$(Platform)=='NX64'">
+      <PreprocessorDefinitions>_NX64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+
+  </ItemDefinitionGroup>
+</Project>

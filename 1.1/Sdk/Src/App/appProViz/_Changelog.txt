@@ -1,0 +1,122 @@
+1.0.572
+-------
+
+* [Hack] Include two more frames in zone view in order to compensate for delayed GPU frames
+
+1.0.571
+-------
+
+* Reworked send/receive buffers.
+
+1.0.570
+-------
+
+* Fixed a bug where Send and Receive would not transmit the whole buffer. 
+* [PS4][Fix] Fixed a bug where sockets would not be opened properly.
+
+1.0.569
+-------
+
+* Session view now displays a list of servers. The default server is now stored in the user's registry.
+
+1.0.568
+-------
+
+* [Fix] Fixed server sending chunks before the connect chunk.
+
+1.0.567
+-------
+
+* [Fix] Fixed app hang due to deadlocking threads.
+* [Known Issue] There still is a race condition when the sender is profiling itself while the send queue is full.
+* [Protocol] Added 'connect' chunk which will automatically reset the parser upon reception.
+
+1.0.566
+-------
+
+* [Protocol] Zone chunks now use 8-bit thread indices instead of 32 bit thread ids
+* [Protocol] Zone chunks now contain 8-bit cpu indices
+
+1.0.565
+-------
+
+* Reworked zone recording, transmission and parsing.
+* Application now limited to 30 FPS.
+
+1.0.564
+-------
+
+* Parser now uses a single shared data set of completed frames. 
+  Should significantly decrease synchronization time since the lock is only held when the parser encounters and "end of frame" chunk.
+* Chunk queues now use a bip-buffer
+
+1.0.563
+-------
+
+* Zones no longer get split on frame boundaries.
+* [Known Issue] Zones spanning multiple frames only get displayed when their end frame is visible.
+
+1.0.562
+-------
+
+* Double-clicking a zone now opens the source file at the zone's location in visual studio. Requires fully qualified paths enabled in the project settings.
+
+1.0.561
+-------
+
+* Zone View: Profile bar now supports LOD.
+* Zone View: Collapsed threads now draw their background instead of not drawing anything.
+* Zone View: Fixed a bug where lock events would not be displayed correctly.
+* Zone View: Fixed a bug where collapsing an item would not adjust the scroll position.
+* Zone View: Fixed a bug where frames would not be properly aligned when double-clicked in a time line.
+* Added "About" view for displaying this change log file.
+
+1.0.560
+-------
+
+* Zone View: Lock bar now supports LOD.
+
+
+1.0.559
+-------
+
+* Zone View: Large Frames will no longer be lod-merged with tiny frames.
+* Zone View: Timeline now displays the frame number again (instead of frame index).
+* Zone View: Summay now displayes frame numbers again (was removed in 1.0.557)
+* Zone View: Zone bars now skip frames when they get too tiny. 
+* Zone View: Added threshold slider "Min Frame Width" to options.
+
+1.0.558
+-------
+
+* Increased maximum number of threads to 64.
+* Fixed Array resize not zeroing "returned" memory when shrinking.
+
+1.0.557
+-------
+
+* Zone View: Summary now supports LOD.
+* Zone View: Summary now displays values in appropriate units.
+
+1.0.556
+-------
+
+* Summary View: Added more memory details.
+* Summary View: Data size is now accurate (calculated on-the-fly).
+* Timeline View: Plot tree can now be collapsed.
+* Timeline View: Plot tree now supports scrolling.
+* Timeline View: Plot tree now has revised visuals.
+* Zone View: Fixed "Time-ruler"'s tick spacing.
+* Zone View: "Time-ruler" now displays frame LOD ranges when frames are below a certain pixel threshold (currently, 10 pixels).
+
+1.0.555
+-------
+
+* Removed graph label value re-formatting for exponents below 1. (Kept Giga, Mega and Kilo, but removed milli, micro and nano).
+
+1.0.554
+-------
+
+* Added support for counter values where the path is given by two individual strings:
+  NeProfileValue( "working set/", "bytes", num_bytes )
+  

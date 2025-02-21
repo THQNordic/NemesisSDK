@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- -->
+  <!-- .................... Import .................... -->
+  <!-- -->
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+
+  <!-- -->
+  <!-- .................... Macros .................... -->
+  <!-- -->
+  <PropertyGroup Label="UserMacros">
+    <Ne-Dir-Sdk>$(MSBuildThisFileDirectory)..\..\..\</Ne-Dir-Sdk>
+    <Ne-Dir-Inc>$(Ne-Dir-Sdk)Inc\</Ne-Dir-Inc>
+    <Ne-Dir-Bin>$(Ne-Dir-Sdk)Bin\$(PlatformName)\$(PlatformToolset)\$(Configuration)\</Ne-Dir-Bin>
+    <Ne-Dir-Lib>$(Ne-Dir-Sdk)Lib\$(PlatformName)\$(PlatformToolset)\$(Configuration)\</Ne-Dir-Lib>
+    <Ne-Dir-Dll>$(Ne-Dir-Sdk)Dll\$(PlatformName)\$(PlatformToolset)\$(Configuration)\</Ne-Dir-Dll>
+    <Ne-Dir-Obj>$(Ne-Dir-Sdk)Tmp\$(PlatformName)\$(PlatformToolset)\$(Configuration)\$(ProjectName)\</Ne-Dir-Obj>
+  </PropertyGroup>
+
+  <!-- -->
+  <!-- .................... Meta .................... -->
+  <!-- -->
+  <PropertyGroup>
+    <_PropertySheetDisplayName>General Settings</_PropertySheetDisplayName>
+  </PropertyGroup>
+
+  <!-- -->
+  <!-- .................... User .................... -->
+  <!-- -->
+  <ItemGroup>
+    <BuildMacro Include="Ne-Dir-Sdk">
+      <Value>$(Ne-Dir-Sdk)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Dir-Inc">
+      <Value>$(Ne-Dir-Inc)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Dir-Bin">
+      <Value>$(Ne-Dir-Bin)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Dir-Lib">
+      <Value>$(Ne-Dir-Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Dir-Obj">
+      <Value>$(Ne-Dir-Obj)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Private">
+      <UniqueIdentifier>{98d67e35-2cf8-4131-8ec1-f3e34d64a0fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\..\..\Inc\Nemesis\Perf\All.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Perf\Protocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Perf\Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Perf\Visualizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Buffer.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Types.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\BufferPool.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\FreeList.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Constants.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Packet.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Recorder.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Worker.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Dispatcher.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Sender.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Receiver.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\ParserData.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\PacketQueue.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\ParserState.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Parser.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Database.h">
+      <Filter>Source Files\Private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Perf\VisualizerTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Visualizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Buffer.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\BufferPool.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\FreeList.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Packet.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Recorder.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Worker.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Dispatcher.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Sender.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Receiver.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\ParserData.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\PacketQueue.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\ParserState.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Parser.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Database.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

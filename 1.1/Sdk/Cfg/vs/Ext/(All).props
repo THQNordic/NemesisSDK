@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="D3D9.props" />
+    <Import Project="Windows.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Nemesis External Dependencies</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  
+  <!-- **************************************** -->
+  
+  <Type Name="nemesis::Pos3_s">
+    <DisplayString>{x}   {y}   {z}</DisplayString>
+  </Type>
+  
+  <Type Name="nemesis::Quat_s">
+    <DisplayString>{x}   {y}   {z}   {w}</DisplayString>
+  </Type>
+
+  <!-- **************************************** -->
+  
+  <Type Name="nemesis::Array&lt;*&gt;">
+    <DisplayString>[{Count} / {Capacity}] {"$T1"}</DisplayString>
+    <Expand>
+      <Item Name="[Alloc]" ExcludeView="simple">(void*)Alloc</Item>
+      <Item Name="[Data]" ExcludeView="simple">(void*)Data</Item>
+      <ArrayItems>
+        <Size>Count</Size>
+        <ValuePointer>Data</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+  
+  <Type Name="nemesis::Table&lt;*&gt;">
+    <DisplayString>[{Count}] {"$T1"}</DisplayString>
+    <Expand>
+      <Item Name="Item" ExcludeView="simple">Item</Item>
+      <Item Name="Offset" ExcludeView="simple">Offset</Item>
+      <ArrayItems>
+        <Size>Count</Size>
+        <ValuePointer>Item</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+  
+  <Type Name="nemesis::NameTable_s">
+    <DisplayString>[{Offsets.Count} | {Strings.Count}]</DisplayString>
+    <Expand>
+      <Item Name="Offsets" ExcludeView="simple">Offsets</Item>
+      <Item Name="Strings" ExcludeView="simple">Strings</Item>
+      <CustomListItems>
+        <Variable Name ="i" InitialValue="0"></Variable>
+        <Size>Offsets.Count</Size>
+        <Loop>
+          <Item>Strings.Item + Offsets[i]</Item>
+          <Exec>i++</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  
+</AutoVisualizer>

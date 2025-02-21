@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Docking">
+      <UniqueIdentifier>{7872281e-4cd6-41e2-83e6-e1c2e3b15f07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Docking\DockCtrl.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockCtrl_Gui.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockCtrl_Layout.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockCtrl_Typed.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockGui.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockMgr.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockTheme.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockTool.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Gui\Dock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Inc\Nemesis\Gui\DockTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockHost_Null.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockHost_Win32.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+    <ClInclude Include="Docking\DockHost.h">
+      <Filter>Source Files\Docking</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Docking\DockCtrl.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockCtrl_Gui.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockCtrl_Layout.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockCtrl_Typed.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockGui.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockMgr.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockTheme.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockTool.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Dock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockHost_Null.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockHost_Win32.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+    <ClCompile Include="Docking\DockHost.cpp">
+      <Filter>Source Files\Docking</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

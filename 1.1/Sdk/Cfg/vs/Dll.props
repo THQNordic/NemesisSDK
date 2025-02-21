@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="Main.props" />
+  </ImportGroup>
+  <!-- -->
+  <!-- .................... Meta .................... -->
+  <!-- -->
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Nemesis Library</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <!-- -->
+  <!-- .................... Build .................... -->
+  <!-- -->
+  <PropertyGroup Label="General">
+    <OutDir>$(Ne-Dir-Dll)</OutDir>
+    <IntDir>$(Ne-Dir-Obj)</IntDir>
+  </PropertyGroup>
+  <!-- -->
+  <!-- .................... C/C++ .................... -->
+  <!-- -->
+  <ItemDefinitionGroup Label="C/C++">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

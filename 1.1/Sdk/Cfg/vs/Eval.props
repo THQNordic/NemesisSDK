@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- -->
+  <!-- .................... Macros .................... -->
+  <!-- -->
+  <PropertyGroup Label="UserMacros">
+    <Ne-Cfg-IsApp>$(ConfigurationType.ToLower().Contains('application'))</Ne-Cfg-IsApp>
+    <Ne-Cfg-IsDll>$(ConfigurationType.ToLower().Contains('dynamic'))</Ne-Cfg-IsDll>
+    <Ne-Cfg-IsLib>$(ConfigurationType.ToLower().Contains('static'))</Ne-Cfg-IsLib>
+    <Ne-Cfg-IsDebug>$(Configuration.ToLower().Contains('debug'))</Ne-Cfg-IsDebug>
+    <Ne-Cfg-IsRelease>$(Configuration.ToLower().Contains('release'))</Ne-Cfg-IsRelease>
+    <Ne-Cfg-IsMaster>$(Configuration.ToLower().Contains('master'))</Ne-Cfg-IsMaster>
+    <Ne-Cfg-IsNx>$(Platform.StartsWith('NX'))</Ne-Cfg-IsNx>
+    <Ne-Cfg-IsUWP>$(Configuration.ToLower().Contains('uwp'))</Ne-Cfg-IsUWP>
+  </PropertyGroup>
+
+  <!-- -->
+  <!-- .................... Meta .................... -->
+  <!-- -->
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Configuration Evaluation</_PropertySheetDisplayName>
+  </PropertyGroup>
+
+  <!-- -->
+  <!-- .................... User .................... -->
+  <!-- -->
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="Ne-Cfg-IsDll">
+      <Value>$(Ne-Cfg-IsDll)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Cfg-IsDebug">
+      <Value>$(Ne-Cfg-IsDebug)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Cfg-IsRelease">
+      <Value>$(Ne-Cfg-IsRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Cfg-IsMaster">
+      <Value>$(Ne-Cfg-IsMaster)</Value>
+    </BuildMacro>
+    <BuildMacro Include="Ne-Cfg-IsUWP">
+      <Value>$(Ne-Cfg-IsUWP)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
